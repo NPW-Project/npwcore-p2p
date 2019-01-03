@@ -32,6 +32,8 @@ pool.on("peerready", function (peer, addr) {
     ", best height: " +
     peer.bestHeight
   );
+  var headerFilter = { starts: ['000002ae80e9ebae5d232b9524ab061df7560c3318e5b386e143edc7f82a4d11'], stop: 0 };
+  peer.sendMessage(peer.messages.GetHeaders());
 });
 pool.on("peerinv", function (peer, message) {
   var newDataNeeded = [];
@@ -54,4 +56,7 @@ pool.on("peerblock", function (peer, message) {
 });
 pool.on("peeraddr", function (peer, message) {
   console.log(message.addresses);
+});
+pool.on("peerheaders", function (peer, message) {
+  console.log(message.headers);
 });

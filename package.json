@@ -19,15 +19,15 @@
   },
   "dependencies": {
     "bloom-filter": "^0.2.0",
-    "buffers": "bitpay/node-buffers#v0.1.2-bitpay",
+    "buffers": "github:bitpay/node-buffers#v0.1.2-bitpay",
     "npwcore-lib": "git://github.com/npw-project/npwcore-lib.git",
     "socks5-client": "^0.3.6"
   },
   "devDependencies": {
-    "npwcore-build": "git://github.com/npw-project/npwcore-build.git",
     "brfs": "^1.2.0",
     "chai": "~1.10.0",
     "gulp": "^3.8.10",
+    "npwcore-build": "git://github.com/npw-project/npwcore-build.git",
     "sinon": "^1.12.2"
   },
   "license": "MIT"
