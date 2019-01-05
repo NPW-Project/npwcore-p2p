@@ -8,7 +8,7 @@ var Networks = npwcore.Networks;
 
 // config 
 var opts = {
-  host: '142.93.74.167',
+  host: '192.168.199.142',
   port: 61472,
   network: Networks.livenet
 };
@@ -27,7 +27,6 @@ peer.once('verack', function (message) {
 });
 peer.on('inv', function (message) {
   var newDataNeeded = [];
-  console.log(message.inventory);
   message.inventory.forEach(function (inv) {
     if (inv.type == 1 || inv.type == 2) {
       newDataNeeded.push(inv);
